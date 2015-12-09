@@ -71,6 +71,7 @@ IRATE_EXTERN NSString *const iRateUpdateMessageKey; //iRateUpdateMessage
 IRATE_EXTERN NSString *const iRateCancelButtonKey; //iRateCancelButton
 IRATE_EXTERN NSString *const iRateRemindButtonKey; //iRateRemindButton
 IRATE_EXTERN NSString *const iRateRateButtonKey; //iRateRateButton
+IRATE_EXTERN NSString *const iRateFeedbackButtonKey; //iRateFeedbackButton
 
 //notification keys
 IRATE_EXTERN NSString *const iRateCouldNotConnectToAppStore;
@@ -80,6 +81,7 @@ IRATE_EXTERN NSString *const iRateUserDidAttemptToRateApp;
 IRATE_EXTERN NSString *const iRateUserDidDeclineToRateApp;
 IRATE_EXTERN NSString *const iRateUserDidRequestReminderToRateApp;
 IRATE_EXTERN NSString *const iRateDidOpenAppStore;
+IRATE_EXTERN NSString *const iRateUserDidSendFeedback;
 
 
 typedef NS_ENUM(NSUInteger, iRateErrorCode)
@@ -103,6 +105,7 @@ typedef NS_ENUM(NSUInteger, iRateErrorCode)
 - (void)iRateUserDidRequestReminderToRateApp;
 - (BOOL)iRateShouldOpenAppStore;
 - (void)iRateDidOpenAppStore;
+- (void)iRateUserDidSendFeedback;
 
 @end
 
@@ -136,6 +139,7 @@ typedef NS_ENUM(NSUInteger, iRateErrorCode)
 @property (nonatomic, copy) NSString *cancelButtonLabel;
 @property (nonatomic, copy) NSString *remindButtonLabel;
 @property (nonatomic, copy) NSString *rateButtonLabel;
+@property (nonatomic, copy) NSString *feedbackButtonLabel;
 
 //debugging and prompt overrides
 @property (nonatomic, assign) BOOL useUIAlertControllerIfAvailable;
